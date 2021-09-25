@@ -131,7 +131,7 @@ function Game() {
       <div className="right">
         <h3>History</h3>
         <button className="sortBtn" onClick={toggleClick}>
-          {sort ? "Ascending" : "Descending"}
+          {sort ? "Descending" : "Ascending"}
         </button>
         <div className="table">{sort ? renderMovesReverse : renderMoves}</div>
       </div>
