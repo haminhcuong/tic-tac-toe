@@ -54,7 +54,7 @@ function Game() {
       }
     }
 
-    var destination = `Go to move ${move} ; ${player.value}(${player.row},${player.column})`;
+    var destination = `Go to move ${move} ; ${player.value}(${player.column},${player.row})`;
     if (move === 0) {
       destination = "Go to move 0";
     }
@@ -79,7 +79,7 @@ function Game() {
         }
       }
 
-      var destination = `Go to move ${move} ; ${player.value}(${player.row},${player.column})`;
+      var destination = `Go to move ${move} ; ${player.value}(${player.column},${player.row})`;
       if (move === 0) {
         destination = "Go to move 0";
       }
