@@ -5,3 +5,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
 }
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
