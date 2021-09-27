@@ -15,18 +15,28 @@ function Board({ line, squares, onClick }) {
     return false;
   }
 
-  return (
-    <div className="Board">
-      {squares.map((square, i) => (
-        <Square
-          isWinner={indexWinner(i)}
-          key={i}
-          value={square}
-          onClick={() => onClick(i)}
-        />
-      ))}
-    </div>
-  );
+  const renderSquare = (i) => {
+    return (
+      <Square
+        key={i}
+        isWinner={indexWinner(i)}
+        value={squares[i]}
+        onClick={() => onClick(i)}
+      />
+    );
+  };
+
+  const gameBoard = [];
+  for (let i = 0; i < 3; i++) {
+    let list = [];
+    for (let j = 0; j < 3; j++) {
+      list.push(renderSquare(3 * i + j));
+    }
+
+    gameBoard.push(<div className="col">{list}</div>);
+  }
+
+  return <div className="Board">{gameBoard}</div>;
 }
 
 export default Board;
